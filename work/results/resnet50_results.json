@@ -1,0 +1,89 @@
+{
+  "env": {
+    "python": "3.10.21",
+    "onnxruntime": "1.23.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "logical_cpus": 16
+  },
+  "rows": [
+    {
+      "model": "resnet50_fp32",
+      "size_mb": 97.41,
+      "top1_pct": 84.54,
+      "agree_with_fp32_pct": 100.0,
+      "latency_ms_median": 89.72,
+      "latency_ms_p95": 128.44,
+      "qdq_nodes": 0,
+      "n_images": 3925,
+      "bench_threads": 1,
+      "delta_top1_pp": 0.0,
+      "speedup_x": 1.0
+    },
+    {
+      "model": "resnet50_int8_pc-entropy",
+      "size_mb": 24.87,
+      "top1_pct": 84.59,
+      "agree_with_fp32_pct": 96.94,
+      "latency_ms_median": 50.87,
+      "latency_ms_p95": 55.21,
+      "qdq_nodes": 256,
+      "n_images": 3925,
+      "bench_threads": 1,
+      "delta_top1_pp": 0.05,
+      "speedup_x": 1.76
+    },
+    {
+      "model": "resnet50_int8_pc-minmax-keep-first-last-fp32",
+      "size_mb": 30.74,
+      "top1_pct": 84.15,
+      "agree_with_fp32_pct": 97.86,
+      "latency_ms_median": 54.61,
+      "latency_ms_p95": 61.55,
+      "qdq_nodes": 244,
+      "n_images": 3925,
+      "bench_threads": 1,
+      "delta_top1_pp": -0.39,
+      "speedup_x": 1.64
+    },
+    {
+      "model": "resnet50_int8_pc-minmax",
+      "size_mb": 24.87,
+      "top1_pct": 84.59,
+      "agree_with_fp32_pct": 96.94,
+      "latency_ms_median": 50.41,
+      "latency_ms_p95": 63.26,
+      "qdq_nodes": 256,
+      "n_images": 3925,
+      "bench_threads": 1,
+      "delta_top1_pp": 0.05,
+      "speedup_x": 1.78
+    },
+    {
+      "model": "resnet50_int8_pc-percentile",
+      "size_mb": 24.87,
+      "top1_pct": 84.71,
+      "agree_with_fp32_pct": 96.87,
+      "latency_ms_median": 49.11,
+      "latency_ms_p95": 54.45,
+      "qdq_nodes": 256,
+      "n_images": 3925,
+      "bench_threads": 1,
+      "delta_top1_pp": 0.17,
+      "speedup_x": 1.83
+    },
+    {
+      "model": "resnet50_int8_pt-minmax",
+      "size_mb": 24.53,
+      "top1_pct": 84.87,
+      "agree_with_fp32_pct": 93.15,
+      "latency_ms_median": 49.2,
+      "latency_ms_p95": 54.92,
+      "qdq_nodes": 256,
+      "n_images": 3925,
+      "bench_threads": 1,
+      "delta_top1_pp": 0.33,
+      "speedup_x": 1.82
+    }
+  ]
+}

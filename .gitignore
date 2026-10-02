@@ -1,0 +1,7 @@
+work/*
+!work/results/
+__pycache__/
+*.pyc
+*.onnx
+# Private study notes (Traditional Chinese). Delete this line if you want to publish them.
+STUDY_GUIDE_zh-TW.md

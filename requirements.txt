@@ -1,0 +1,7 @@
+# CPU-only. If you already have PyTorch from your thesis environment, keep it.
+torch
+torchvision
+onnx
+onnxruntime        # CPU build. Do NOT install onnxruntime-gpu in the same env.
+numpy
+pillow
